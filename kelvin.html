@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kelvin dönüşümü</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+     <!-- Navbar -->
+    <header class="container">
+      <nav>
+          <div class="Home active">
+            <a href="index.html">Home</a>
+          </div>
+          
+          <div class="menu">
+              <ul>
+                  <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                  <li><a href="iletişim.html">Bize Ulaşın</a></li>
+                  <li><a href="istek.html">İstek</a></li>
+              </ul>
+             
+          </div>
+      </nav> 
+    </header>
+  <!-- Navbar End -->
+
+  <div class="center">
+    <h1>kelvin dönüşümü</h1>
+    <input type="text" id="inputKelvin" class="input-box" placeholder="kelvin değerini girin">
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function convertTemperature() {
+      var kelvin = document.getElementById('inputKelvin').value;
+      var fahrenheit = (kelvin - 273.15) * (9/5) + 32;
+      var celsius = parseFloat(kelvin) - 273.15;
+
+      document.getElementById('result').innerHTML = "Fahrenheit: " + fahrenheit.toFixed(2) + " °F<br>" + "Celsius: " + celsius.toFixed(2) + " °C";
+    }
+
+    document.getElementById('inputKelvin').addEventListener('input', convertTemperature);
+  </script>
+
+<div>
+    <p style="margin-top: 256px;">
+      .
+    </p>
+   </div>
+</body>
+</html>
