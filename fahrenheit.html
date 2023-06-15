@@ -21,28 +21,27 @@
                   <li><a href="iletişim.html">Bize Ulaşın</a></li>
                   <li><a href="istek.html">İstek</a></li>
               </ul>
-             
           </div>
       </nav> 
     </header>
   <!-- Navbar End -->
 
   <div class="center">
-    <h1>Kelvin dönüşümü</h1>
-    <input type="text" id="inputKelvin" class="input-box" placeholder="Kelvin değerini girin">
+    <h1>Fahrenheit Dönüşümü</h1>
+    <input type="text" id="inputFahrenheit" class="input-box" placeholder="Fahrenheit değerini girin">
     <div id="result"></div>
   </div>
 
   <script>
     function convertTemperature() {
-      var kelvin = document.getElementById('inputKelvin').value;
-      var fahrenheit = (kelvin - 273.15) * (9/5) + 32;
-      var celsius = parseFloat(kelvin) - 273.15;
+      var fahrenheit = document.getElementById('inputFahrenheit').value;
+      var celsius = (fahrenheit - 32) * (5/9);
+      var kelvin = parseFloat(celsius) + 273.15;
 
-      document.getElementById('result').innerHTML = "Fahrenheit: " + fahrenheit.toFixed(2) + " °F<br>" + "Celsius: " + celsius.toFixed(2) + " °C";
+      document.getElementById('result').innerHTML = "Celsius: " + celsius.toFixed(2) + " °C<br>" + "Kelvin: " + kelvin.toFixed(2) + " K";
     }
 
-    document.getElementById('inputKelvin').addEventListener('input', convertTemperature);
+    document.getElementById('inputFahrenheit').addEventListener('input', convertTemperature);
   </script>
    <div>
     <p style="margin-top: 256px;">
